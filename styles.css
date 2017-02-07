@@ -1,0 +1,287 @@
+
+
+/* Global Layout Set-up */
+* { 
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  background-color: #2a2a2a; /* #c2c4c6; */ /* original value #f7f5f0 */
+  
+}
+/* Link Styles */
+
+a {
+  text-decoration: none;
+  color: #999;
+}
+a:hover {
+  color: #6633ff;
+}
+
+/* Section Styles */
+
+.main-nav {
+  width: 100%;
+  background: black;
+  min-height: 30px;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+  /*border-bottom: 1px solid #91ccea;*/ /*#14b0ff;*/ 
+  z-index: 1000; /* fixed z index glitch when css filter set on profile img */
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav .name {
+    display: block;
+    margin-right: auto;
+    color: white;
+}
+.nav li {
+  padding: 5px 10px 10px 10px;
+}
+.nav a {
+  transition: all .5s;
+}
+.nav a:hover {
+  color: white
+}
+
+.selected {
+  color: white;
+}
+
+header {
+  text-align: center;
+  background: /*linear-gradient(transparent 85%, #767676),*/
+              url('images/ArwenMoyaWinter2.jpg') no-repeat bottom;
+  /*filter: grayscale(65%);*/ /*add filter effect */
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 60px;
+}
+header {
+  line-height: 1.5;
+  border-bottom: 7px solid #000;
+}
+header .profile-image {
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+  border: 3px solid #000; /*#91ccea;*/ 
+  transition: all .5s;
+  /*filter: grayscale(90%);*/ /* added css filter */
+  opacity: 0.8;
+}
+
+header .profile-image:hover {
+  transform: scale(1.5) rotate(5deg); /* original scale 1.2 */
+  filter: none;
+  opacity: 1; /* removes opacity of thumb */
+}
+
+.tag {
+  /*background: rgba(194,196,198,.3);*/
+  color: black; /* initil value = 'black' */
+  font-weight: normal;
+  padding: 10px;
+  border-radius: 5px;
+  display: table;
+  margin: 10px auto;
+} 
+.location {
+  /*background-color: #222;*/ /* removed bg */
+  /*color: #5e9bff;*/ /* initial color = #5e9bff */
+  color: #000;
+  background: rgba(20, 176, 255, .2); /* hex value = #14b0ff;*/
+}
+
+.wrap {  /* added for background image cover */
+  background-color: #c2c4c6; /* original value #f7f5f0 */
+  background: /*linear-gradient(#767676, transparent 90%),*/
+              url('images/ArwenMoyaMarsh.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  /*filter: grayscale(40%);*/
+  border-bottom: 3px solid #000;
+}
+
+.card {
+  margin: 30px;
+  padding: 20px 40px 40px;
+  max-width: 500px;
+  text-align: left;
+  background: #fff; /*#d0d0d0;*/ 
+  border-bottom: 4px solid #9e80a4; /*#91ccea;*/
+  border-radius: 6px;
+  transition: all .5s;
+  opacity: .9; /* added for see thru bg */
+  box-shadow: 0px 0px 3px 0px #000; 
+}
+.card:hover {
+  border-color: #14b0ff; /* original value #ff99ff; */
+}
+
+
+.card h2::before { /* generates dot */
+  content: "";
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background: #91ccea;
+  margin: 0 8px 0 0;
+}
+
+ul.skills {
+  padding: 0;
+  text-align: center;
+}
+
+.skills li {
+  border-radius: 6px;
+  display: inline-block;
+  background: #767676;
+  color: white;
+  padding: 5px 10px;
+  margin: 2px;
+}
+
+.skills li:nth-child(odd) {
+  background: #91ccea; /*#323232;*/
+  color: #000;
+}
+
+footer {
+  width: 100%;
+  min-height: 30px;
+  padding: 20px 0 40px 20px;
+  color: #fff; /* because bg color change in body element */
+  margin: 0; /* fix margin collapse on experience/about page */
+}
+
+footer .copyright {
+  top: -8px;
+  font-size: .75em;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px 0 0 0; /* push social icons down */
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+a.social {
+  display: inline-block;
+  text-indent: -9999px;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: .4;
+  transition: all .5s;
+}
+a.twitter {
+  background-image: url(images/twitter.svg);
+}
+a.linkedin {
+  background-image: url(images/linkedin.svg);
+}
+a.github {
+  background-image: url(images/github.svg);
+}
+a.social:hover {
+  opacity: 1;
+}
+.clearfix {
+  clear: both;
+}
+
+/* Flexbox sticky footer ***************/
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.flex {
+  flex: 1;
+}
+/* Experience Page ********************/
+
+
+.experience-card {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-card-img {
+  height: 250px;
+  background: url('images/ArwenLook.jpg') no-repeat;
+  background-size: cover;
+  margin-top: auto;
+  border: 3px solid #000;
+  border-radius: 5px;
+}
+
+
+
+
+/* Styles for larger screens */
+@media screen and (min-width: 720px) {
+  
+  .flex {
+      display: -ms-flexbox;      /* TWEENER - IE 10 */
+      display: flex; 
+      max-width: 1200px;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      margin: 0 auto;
+  }
+
+  header {
+    min-height: 470px;
+  }
+
+  .nav {
+    max-width: 1200px;
+    padding: 0 30px;
+  }
+
+
+  main {
+    padding-top: 20px;
+  }
+
+  main p {
+    line-height: 1.6em;
+  }
+
+  footer {
+    font-size: 1.3em;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+}
+
