@@ -14,6 +14,8 @@ body {
   background-color: #2a2a2a; /* #c2c4c6; */ /* original value #f7f5f0 */
   
 }
+
+
 /* Link Styles */
 
 a {
@@ -126,7 +128,7 @@ header .profile-image:hover {
   max-width: 500px;
   text-align: left;
   background: #fff; /*#d0d0d0;*/ 
-  border-bottom: 4px solid #9e80a4; /*#91ccea;*/
+  border-bottom: 4px solid #000; /*#91ccea;*/
   border-radius: 6px;
   transition: all .5s;
   opacity: .9; /* added for see thru bg */
@@ -145,6 +147,53 @@ header .profile-image:hover {
   border-radius: 50%;
   background: #91ccea;
   margin: 0 8px 0 0;
+ /* box-shadow: 2px 3px 4px rgba(0,0,0,.4);*/
+}
+
+.hobbies-div {
+  /*background-color: #767676;*/ /*#91ccea;*/
+  background: url('images/ArwenMoyaBridge2.jpg') no-repeat bottom;
+  background-size: cover;
+  padding: 10px 15px;
+  border-radius: 5px;
+
+}
+
+.hobbies-div > h3 {
+  background: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  display: inline-block;
+}
+
+.hobbies-div ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.hobbies-div ul li {
+  padding: 5px 10px;
+  background: #fff;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  align-self: flex-end;
+}
+
+
+.goals {
+  display: flex;
+  flex-direction: column;
+}
+
+.goals-card-img {
+  height: 250px;
+  background: url('images/ArwenMoyaTurtle.jpg') no-repeat bottom;
+  background-size: cover;
+  margin-top: auto;
+  /*border: 1px solid #91ccea;*/
+  border-radius: 5px;
 }
 
 ul.skills {
@@ -159,6 +208,7 @@ ul.skills {
   color: white;
   padding: 5px 10px;
   margin: 2px;
+  box-shadow: 2px 3px 4px rgba(0,0,0,.4);
 }
 
 .skills li:nth-child(odd) {
@@ -215,6 +265,11 @@ a.social:hover {
   clear: both;
 }
 
+.b-shadow {
+  box-shadow: 2px 3px 4px rgba(0,0,0,.4);
+}
+
+
 /* Flexbox sticky footer ***************/
 
 body {
@@ -240,7 +295,7 @@ body {
   background: url('images/ArwenLook.jpg') no-repeat;
   background-size: cover;
   margin-top: auto;
-  border: 3px solid #000;
+  /*border: 1px solid #91ccea;*/
   border-radius: 5px;
 }
 
